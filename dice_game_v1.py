@@ -1,11 +1,5 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Mar  5 12:35:46 2021
-
-@author: polevodin-di
-"""
-
 import tkinter as tk
+from functools import partial
 from tkinter import messagebox 
 import random
 import time
@@ -31,7 +25,7 @@ def click_roll():
     if roll_user == roll_admin:
         messagebox.showinfo('Так тоже бывает...', 'У нас ничья в этой партии!')
     txt.delete(0, END)
-    txt.insert(0, 'У тебя на кубике выпало - {}, мой результат {}'.format(roll_user, roll_admin)) 
+    txt.insert(0, 'У тебя на кубике выпало - {}, мой результат - {}'.format(roll_user, roll_admin)) 
     label2.configure(text='Общий счет игры: Пользователь - {}, Админ - {}'.format(user_score, admin_score))
 
 """ настройка виджетов """
