@@ -1,6 +1,7 @@
 import tkinter as tk
 from functools import partial
-from tkinter import messagebox 
+from tkinter import messagebox
+from tkinter import Entry
 import random
 import time
 
