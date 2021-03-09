@@ -39,8 +39,8 @@ button = tk.Button(
     width=10,
     height=2,
     font=('Calibri', 11, 'bold'),
-    bg='antique white',
-    fg='black',
+    bg='black',
+    fg='white',
     command=partial(click_roll))
 
 """ создаем геометрию """
