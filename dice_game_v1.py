@@ -1,18 +1,19 @@
 import tkinter as tk
+from tkinter import W, E
+from tkinter import Entry, messagebox
 from functools import partial
-from tkinter import Entry
-from tkinter import messagebox 
 import random
 import time
 
 window = tk.Tk()
 window.title("Игра: Кости")
 
-"""Переменные для игры"""
+
+""" Переменные для игры """
 user_score = 0
 admin_score = 0
 
-""" Функция броска кубика"""
+""" Функция броска кубика и записи результата броска """
 def click_roll():
     global user_score
     global admin_score
@@ -38,14 +39,15 @@ button = tk.Button(
     width=10,
     height=2,
     font=('Calibri', 11, 'bold'),
-    bg='white',
+    bg='antique white',
     fg='black',
     command=partial(click_roll))
 
 """ создаем геометрию """
-label.grid()
-button.grid()
-txt.grid()
-label2.grid()
+
+label.grid(row=1, column=0, sticky=W+E, padx = 20)
+button.grid(row=2, column=0, pady=10)
+txt.grid(row=3, column=0, sticky=W+E, padx = 20)
+label2.grid(row=4, column=0, sticky=W+E, pady=10)
 
 window.mainloop()
